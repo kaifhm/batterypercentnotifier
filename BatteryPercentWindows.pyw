@@ -29,11 +29,11 @@ try:
 
         if battery_percent >= 90 and charging:
             notification.notify('Battery Sufficiently Charged',
-                                f'Battery charged to {battery_percent}%. Please unplug your AC adapter', app_icon=r'F:\MyPythonScripts\Battery\battery.ico')
+                                f'Battery charged to {battery_percent}%. Please unplug your AC adapter', app_icon=icon_path)
             sleep(120)
         elif battery_percent <= 20 and not charging:
             message = f'Battery is at {battery_percent}%. Please plug-in your AC adapter'
-            notification.notify('Battery Low', message, app_icon=r'F:\MyPythonScripts\Battery\battery.ico')
+            notification.notify('Battery Low', message, app_icon=icon_path)
             sleep(120)
         else:
             sleep(1)
